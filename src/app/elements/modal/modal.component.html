@@ -1,0 +1,15 @@
+<div class="c-modal-overlay">
+  <div class="c-modal-container">
+    <div class="c-modal-heading">
+      <span class="confirm">Confirm Delete</span>
+      <span class="cross" (click)="close.emit()">&#10005;</span>
+    </div>
+    <div class="c-modal-body">
+      Are u sure u want to proceed for "{{ placeholder||"product" }}" ?
+    </div>
+    <div class="c-modal-footer">
+      <button type="button" (click)="close.emit()">Back</button>
+      <button type="button" (click)="procced.emit()">Proceed</button>
+    </div>
+  </div>
+</div>

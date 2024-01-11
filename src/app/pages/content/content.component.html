@@ -1,0 +1,103 @@
+<div class="c-content-overlay">
+  <div
+    class="c-content-container max-w-[500px] mx-auto border-solid border-blue-500 border-2 p-4 mt-12"
+  >
+    <form class="w-full max-w-lg" autocomplete="of">
+      <div class="flex flex-wrap -mx-3">
+        <div class="w-full px-3 mb-6">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-first-name"
+          >
+            Product Name
+          </label>
+          <input
+            autocomplete="of"
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="grid-first-name"
+            type="text"
+            placeholder="Jane"
+            name="name"
+            [(ngModel)]="product.name"
+          />
+          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3 mb-6">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-city"
+          >
+            Category
+          </label>
+          <input
+            autocomplete="d"
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="grid-city"
+            type="text"
+            name="category"
+            [(ngModel)]="product.category"
+            placeholder="air conditioner"
+          />
+        </div>
+        <div class="w-full px-3 mb-6">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-state"
+          >
+            Status
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-state"
+              [(ngModel)]="product.active"
+              name="active"
+            >
+              <option value="active">Active</option>
+              <option value="">In-Active</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-3 mb-6">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-zip"
+          >
+            Price
+          </label>
+          <input
+            autocomplete="of"
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="grid-zip"
+            type="text"
+            placeholder="0"
+            name="price"
+            [(ngModel)]="product.price"
+          />
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="block ml-auto bg-transparent hover:bg-blue-700 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-700 hover:border-transparent rounded transition-all duration-200 ease-linear"
+        (click)="addProduct($event)"
+      >
+        Button
+      </button>
+    </form>
+  </div>
+</div>
